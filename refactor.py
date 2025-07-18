@@ -1,33 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Mirrored from www.cjcht.com/news/happy-new-year-2019 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 15:11:51 GMT -->
-<head>
-    <meta name="google-site-verification" content="e8ZXDHj2ae_oHWhEe6JnJW61jqJntFipSeFBidrZcvU" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-        <meta name="description" content="To wish you joy at this holy season. Wishing every happiness will always be with you.">
-            <title>Happy New Year 2019 | CJCHT</title>
-
-                    <link href="../user/themes/jeanlee/css/custom.css" type="text/css" rel="stylesheet" />
-<link href="../user/plugins/lightslider/css/lightslider-core.css" type="text/css" rel="stylesheet" />
-<link href="../user/plugins/lightslider/css/lightslider-custom.css" type="text/css" rel="stylesheet" />
 
 
-                    <script src="../system/assets/jquery/jquery-2.1.4.min.js" type="text/javascript" ></script>
-<script src="../user/themes/jeanlee/js/modernizr.custom.71422.js" type="text/javascript" ></script>
-<script src="../user/plugins/lightslider/js/jquery.lightSlider.min.js" type="text/javascript" ></script>
+import os
+import re
 
+def refactor_html_file(file_path):
+    with open(file_path, 'r') as f:
+        content = f.read()
 
-        
-</head>
-<body>
-    <div id="wrapper">
-        <div id="header">
-            
+    # Add viewport meta tag and Bootstrap CSS
+    content = re.sub(r'(<meta http-equiv="X-UA-Compatible" content="IE=edge">)', r'\1\n    <meta name="viewport" content="width=device-width, initial-scale=1">\n        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">\n', content)
+
+    # Add Bootstrap JS
+    content = re.sub(r'(</body>)', r'<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>\n\1', content)
+
+    # Replace navbar
+    content = re.sub(r'<div id="logo">.*?</div><!-- end mavMenu -->', '''
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/index.html"><img alt="logo" src="/user/themes/jeanlee/images/logo.png"></a>
@@ -81,56 +68,37 @@
                     </div>
                 </div>
             </nav>
-    
+    ''', content, flags=re.DOTALL)
 
-            <div id="bannerLang">
-                        	    <form id="langSwitcher" action="#" method="post">
-                    <div class="styled-select">
-                        <select name="lang" onchange="window.location.href=this.value">
-                            <option value="/" selected="selected">English</option>
-                        </select>
+    # Refactor main content
+    content = re.sub(r'<div id="mainContent">.*?<div  id="home-contentRight" class="im">.*?</div>.*?</div>', '''
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div id="home-contentLeft">
+                        </div>
                     </div>
-                </form>
+                    <div class="col-md-4">
+                        <div id="home-contentRight" class="im">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+    ''', content, flags=re.DOTALL)
 
-        <div id="bannerWhiteLine"></div>
-
-        <div id="main">
-            <div id="contentTitle">
-                                    Happy New Year 2018
-                            </div>
-            <div id="mainContent">
-                <div id="contentLeft">
-    <div id="innerContent">
-        <h1>Happy New Year 2019</h1>
-        <div><p>To wish you joy at this holy season. Wishing every happiness will always be with you.</p></div>
-    </div>
-</div>
-<div  id="contentRight" class="im">
-    <img title="Happy New Year 2018" src="../images/6/4/0/2/f/6402fd12876bb1d8e32bb24e6b4c615a776df6f7-01.jpg" />
-</div>
-            </div>
-        </div><!-- end main -->
-
-        
+    # Refactor footer
+    content = re.sub(r'<div id="footer">.*?</div><!-- end footer -->', '''
         <footer class="container py-4 mt-5">
             <p class="text-center text-muted">© Copyright 2012 CJCHT. All Rights Reserved.</p>
         </footer>
-    
-    </div><!-- end wrapper -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+    ''', content, flags=re.DOTALL)
 
-  ga('create', 'UA-46870414-1', 'auto');
-  ga('send', 'pageview');
+    with open(file_path, 'w') as f:
+        f.write(content)
 
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+if __name__ == '__main__':
+    for root, dirs, files in os.walk('.'):
+        for file in files:
+            if file.endswith('.html') and file != 'index.html':
+                refactor_html_file(os.path.join(root, file))
 
-<!-- Mirrored from www.cjcht.com/news/happy-new-year-2019 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 15:11:52 GMT -->
-</html>
