@@ -1,202 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from www.cjcht.com/people by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 15:11:25 GMT -->
 <head>
     <meta name="google-site-verification" content="e8ZXDHj2ae_oHWhEe6JnJW61jqJntFipSeFBidrZcvU" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
-            <title>People | CJCHT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Meet the leadership team at CJCHT - Dedicated professionals driving sustainable footwear innovation and social responsibility.">
+    <title>Leadership Team | CJCHT</title>
 
-                    <link href="user/themes/jeanlee/css/custom.css" type="text/css" rel="stylesheet" />
-<link href="user/plugins/lightslider/css/lightslider-core.css" type="text/css" rel="stylesheet" />
-<link href="user/plugins/lightslider/css/lightslider-custom.css" type="text/css" rel="stylesheet" />
-
-
-                    <script src="system/assets/jquery/jquery-2.1.4.min.js" type="text/javascript" ></script>
-<script src="user/themes/jeanlee/js/modernizr.custom.71422.js" type="text/javascript" ></script>
-<script src="user/plugins/lightslider/js/jquery.lightSlider.min.js" type="text/javascript" ></script>
-
-
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c5d8b;
+            --secondary-color: #f8a613;
+            --accent-color: #e67e22;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --text-color: #34495e;
+        }
         
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            padding-top: 80px;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color)) !important;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,800 1000,1000"/></svg>');
+            z-index: 1;
+        }
+        
+        .page-header .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .leader-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .leader-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .leader-image {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .leader-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .leader-info {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .leader-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .leader-position {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        
+        .leader-bio {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .memorial-section {
+            background: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .memorial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .memorial-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            overflow: hidden;
+        }
+        
+        .memorial-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer h5 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .leader-image {
+                height: 250px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div id="wrapper">
-        <div id="header">
-            <div id="logo">
-                <a href="index.html"><img alt="logo" src="user/themes/jeanlee/images/logo.png"></a>
-            </div>
-
-            <div id="navMenu">
-                                    <ul>
-                                                                                                                                            <li class="">
-                        <a href="about.html">About</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="footwear.html">Footwear</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="culture.html">Culture</a>
-                                                <ul>
-                                                                                                        <li class="">
-                        <a href="culture/kehua.html">- Kehua</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="culture/vocalasia.html">- Vocal Asia</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="culture/ahouse.html">- A House</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="culture/boven.html">- Boven</a>
-                                            </li>
-                                                            
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img alt="CJCHT Logo" src="user/themes/jeanlee/images/logo.png" height="40" class="me-2">
+                <span>CJCHT</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="footwear.html">Footwear</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="cultureDropdown" role="button" data-bs-toggle="dropdown">
+                            Culture
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="culture/kehua.html">Kehua</a></li>
+                            <li><a class="dropdown-item" href="culture/vocalasia.html">Vocal Asia</a></li>
+                            <li><a class="dropdown-item" href="culture/ahouse.html">A House</a></li>
+                            <li><a class="dropdown-item" href="culture/boven.html">Boven</a></li>
                         </ul>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="sustainability.html">Sustainability</a>
-                                                <ul>
-                                                                                                        <li class="">
-                        <a href="sustainability/net-zero-commitment.html">- Net-zero Commitment</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="sustainability/cdp-supplier-engagement.html">- CDP Supplier Engagement</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="sustainability/Environmental__Biodiversity_Public_Policy_Announcement.html">- Environmental and Biodiversity Public Policy Announcement</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="sustainability/Commitment_Statement_Regarding_Environmental_Position.html">- Commitment and Statement Regarding Environmental Position</a>
-                                            </li>
-                                                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sustainabilityDropdown" role="button" data-bs-toggle="dropdown">
+                            Sustainability
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="sustainability/net-zero-commitment.html">Net-zero Commitment</a></li>
+                            <li><a class="dropdown-item" href="sustainability/cdp-supplier-engagement.html">CDP Supplier Engagement</a></li>
                         </ul>
-                                            </li>
-                                                                                                    <li class="current">
-                        <a href="people.html">People</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="contact.html">Contact</a>
-                                                <ul>
-                                                                                                        <li class="">
-                        <a href="contact/taiwan.html">- Taiwan</a>
-                                                <ul>
-                                                                                                                                                
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="people.html">People</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown">
+                            Contact
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contact/taiwan.html">Taiwan</a></li>
+                            <li><a class="dropdown-item" href="contact/china.html">China</a></li>
+                            <li><a class="dropdown-item" href="contact/others.html">Others</a></li>
                         </ul>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="contact/china.html">- China</a>
-                                                <ul>
-                                                                                                                                                
-                        </ul>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="contact/others.html">- Others</a>
-                                                <ul>
-                                                                                                                                                
-                        </ul>
-                                            </li>
-                                                            
-                        </ul>
-                                            </li>
-                                                            
+                    </li>
                 </ul>
-            </div><!-- end mavMenu -->
-
-            <div id="bannerLang">
-                        	    <form id="langSwitcher" action="#" method="post">
-                    <div class="styled-select">
-                        <select name="lang" onchange="window.location.href=this.value">
-                            <option value="/" selected="selected">English</option>
-                        </select>
-                    </div>
-                </form>
             </div>
         </div>
+    </nav>
 
-        <div id="bannerWhiteLine"></div>
-
-        <div id="main">
-            <div id="contentTitle">
-                                    
-                            </div>
-            <div id="mainContent">
-                <div id="contentLeft">
-    <div id="innerContent">
-        <h1>People</h1>
-        <div><p>Visit <a href="https://www.flickr.com/photos/cjcht">Flickr</a> for more information.</p></div>
-    </div>
-</div>
-<div  id="contentRight" class="im">
-    
-    
-    
-
-
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $("#ls-b3xreFzpEI").lightSlider({
-        item: 1,
-        slideMove: 1,
-        slideMargin: 0,
-        mode: 'fade',
-        cssEasing: 'ease',
-        easing: '',
-        speed: 2000,
-        auto: true,
-        loop: true,
-        pause: 5000,
-        controls: false,
-        keyPress: true,
-        adaptiveHeight: true,
-        vertical: false,
-        verticalHeight: 500,
-        pager: false,
-        gallery: false,
-        galleryMargin: 15,
-        thumbMargin: 5,
-        enableTouch: true,
-        enableDrag: true,
-
-    });
-  });
-</script>
-
-
-<div id="ls-b3xreFzpEI-wrapper" class="grav-lightslider">
-        <ul id="ls-b3xreFzpEI">
-                                                            <li data-thumb="/images/4/2/8/f/0/428f0b4d814a5c27d168400ac3ac8e4b21daeed0-cjcht.jpeg">
-                <img src="images/d/0/d/e/d/d0deda00f610472dcfaa0c7a560ecb0bcbfe316d-cjcht.jpg" />
-            </li>
-                                                            <li data-thumb="/images/b/6/b/e/d/b6bedd9930aa959262554282cf96821ef2210420-clare-leprosy.jpeg">
-                <img src="images/3/a/f/c/e/3afcefe663726a49e1f3a6b96097417b26f6c6cc-clare-leprosy.jpg" />
-            </li>
-            </ul>
-    </div>
-
-
-
-</div>
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="page-title">Our Leadership</h1>
+                    <p class="page-subtitle">Meet the dedicated team driving CJCHT's mission of sustainable excellence</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <i class="fas fa-users fa-6x opacity-50"></i>
+                    </div>
+                </div>
             </div>
-        </div><!-- end main -->
+        </div>
+    </header>
 
-        <div id="footer">
-                            <div id="footerDiv"> © Copyright 2012 CJCHT. All Rights Reserved.   </div>
-<a href="quagmiresemiweekly.html"><!-- judicial --></a>
-        </div><!-- end footer -->
-    </div><!-- end wrapper -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+    <!-- Memorial Section -->
+    <section class="memorial-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="memorial-card">
+                        <div class="memorial-image">
+                            <img src="images/6/6/1/4/0/66140a5abb591f7e2af4f367d5613811af54dcec-clarechen.png" alt="Clare Chen">
+                        </div>
+                        <h2 class="mb-3">In Memory of Clare Chen</h2>
+                        <h4 class="text-primary mb-4">Founder & Chairperson (1952-2022)</h4>
+                        <p class="lead">We are announcing with a heavy heart the passing of our beloved Clare Chen, founder and chairperson of the CJCHT Group, the Kehua Foundation, Vocal Asia, and the Shanghai A Cappella Center.</p>
+                        <p>She passed away peacefully on May 17, 2022, at the age of 70 surrounded by her caring and loving family. Clare's vision and leadership built CJCHT into the sustainable, socially responsible company it is today.</p>
+                        <p>Her legacy continues through our commitment to excellence, cultural enrichment, and making a positive impact in communities worldwide.</p>
+                        <a href="news/in-memory-of-clare-chen.html" class="btn btn-primary mt-3">Read Full Memorial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  ga('create', 'UA-46870414-1', 'auto');
-  ga('send', 'pageview');
+    <!-- Current Leadership -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Current Leadership Team</h2>
+                    <p class="lead text-muted">Continuing Clare's vision with experienced leadership</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="images/4/9/d/6/4/49d64653521206d243471ac70162da72f8d9142c-nyc-office.jpg" alt="Executive Team">
+                        </div>
+                        <div class="leader-info">
+                            <div class="leader-name">Executive Committee</div>
+                            <div class="leader-position">Board of Directors</div>
+                            <div class="leader-bio">Our experienced board continues to guide CJCHT's strategic direction, ensuring sustainable growth and social responsibility remain at the core of our operations.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="images/6/7/7/5/3/677531dab40239ea1b54e64b91433cadac69e873-office3.jpg" alt="Operations Team">
+                        </div>
+                        <div class="leader-info">
+                            <div class="leader-name">Operations Leadership</div>
+                            <div class="leader-position">Manufacturing & Quality</div>
+                            <div class="leader-bio">Leading our manufacturing operations with over 30 years of combined experience in sustainable footwear production and quality management.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="images/3/c/8/0/8/3c808bfd34b76335e39b497f9d301fb665aa6cc0-showroom-pto.jpg" alt="Global Team">
+                        </div>
+                        <div class="leader-info">
+                            <div class="leader-name">Global Development</div>
+                            <div class="leader-position">International Operations</div>
+                            <div class="leader-bio">Managing our worldwide operations and partnerships, ensuring CJCHT's values and quality standards are maintained across all markets.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</script>
+    <!-- Company Culture -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Our Culture & Values</h2>
+                    <p class="lead text-muted">What drives our team every day</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-heart fa-3x text-primary"></i>
+                        </div>
+                        <h4>Social Responsibility</h4>
+                        <p>Committed to making a positive impact in our communities and supporting charitable initiatives worldwide.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-leaf fa-3x text-success"></i>
+                        </div>
+                        <h4>Sustainability</h4>
+                        <p>Environmental stewardship is central to our operations, from materials to manufacturing processes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-music fa-3x text-warning"></i>
+                        </div>
+                        <h4>Cultural Enrichment</h4>
+                        <p>Supporting arts, music, and cultural activities through our foundations and community programs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-award fa-3x text-info"></i>
+                        </div>
+                        <h4>Excellence</h4>
+                        <p>Striving for the highest standards in everything we do, from product quality to customer service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>CJCHT</h5>
+                    <p>Leading sustainable footwear manufacturer committed to excellence, culture, and social responsibility since 1989.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Company</h5>
+                    <div class="footer-links">
+                        <div><a href="about.html">About Us</a></div>
+                        <div><a href="footwear.html">Products</a></div>
+                        <div><a href="people.html">Leadership</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Sustainability</h5>
+                    <div class="footer-links">
+                        <div><a href="sustainability/net-zero-commitment.html">Net-zero</a></div>
+                        <div><a href="sustainability/cdp-supplier-engagement.html">CDP</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Culture</h5>
+                    <div class="footer-links">
+                        <div><a href="culture/kehua.html">Kehua</a></div>
+                        <div><a href="culture/vocalasia.html">Vocal Asia</a></div>
+                        <div><a href="culture/ahouse.html">A House</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Contact</h5>
+                    <div class="footer-links">
+                        <div><a href="contact/taiwan.html">Taiwan</a></div>
+                        <div><a href="contact/china.html">China</a></div>
+                        <div><a href="contact/others.html">Others</a></div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 CJCHT. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        // Google Analytics
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-46870414-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
-
-<!-- Mirrored from www.cjcht.com/people by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 15:11:27 GMT -->
 </html>

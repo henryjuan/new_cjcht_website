@@ -1,274 +1,659 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from www.cjcht.com/footwear by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 15:09:46 GMT -->
 <head>
     <meta name="google-site-verification" content="e8ZXDHj2ae_oHWhEe6JnJW61jqJntFipSeFBidrZcvU" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
-            <title>CJCHT and Footwear | CJCHT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CJCHT Footwear - Premium quality shoes manufactured with sustainable practices and innovative materials since 1989.">
+    <title>Footwear | CJCHT</title>
 
-                    <link href="user/themes/jeanlee/css/custom.css" type="text/css" rel="stylesheet" />
-<link href="user/plugins/lightslider/css/lightslider-core.css" type="text/css" rel="stylesheet" />
-<link href="user/plugins/lightslider/css/lightslider-custom.css" type="text/css" rel="stylesheet" />
-
-
-                    <script src="system/assets/jquery/jquery-2.1.4.min.js" type="text/javascript" ></script>
-<script src="user/themes/jeanlee/js/modernizr.custom.71422.js" type="text/javascript" ></script>
-<script src="user/plugins/lightslider/js/jquery.lightSlider.min.js" type="text/javascript" ></script>
-
-
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c5d8b;
+            --secondary-color: #f8a613;
+            --accent-color: #e67e22;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --text-color: #34495e;
+        }
         
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            padding-top: 80px;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color)) !important;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,800 1000,1000"/></svg>');
+            z-index: 1;
+        }
+        
+        .page-header .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--secondary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .product-info {
+            padding: 25px;
+        }
+        
+        .product-category {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .product-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 10px 0;
+            color: var(--dark-color);
+        }
+        
+        .product-description {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .product-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .product-features li {
+            padding: 5px 0;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .product-features li i {
+            color: var(--secondary-color);
+            margin-right: 8px;
+        }
+        
+        /* Manufacturing Process */
+        .process-section {
+            background: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+            position: relative;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .process-step h4 {
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Quality Standards */
+        .quality-section {
+            padding: 80px 0;
+        }
+        
+        .quality-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .quality-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .quality-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer h5 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .product-image {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div id="wrapper">
-        <div id="header">
-            <div id="logo">
-                <a href="index.html"><img alt="logo" src="user/themes/jeanlee/images/logo.png"></a>
-            </div>
-
-            <div id="navMenu">
-                                    <ul>
-                                                                                                                                            <li class="">
-                        <a href="about.html">About</a>
-                                            </li>
-                                                                                                    <li class="current">
-                        <a href="footwear.html">Footwear</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="culture.html">Culture</a>
-                                                <ul>
-                                                                                                        <li class="">
-                        <a href="culture/kehua.html">- Kehua</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="culture/vocalasia.html">- Vocal Asia</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="culture/ahouse.html">- A House</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="culture/boven.html">- Boven</a>
-                                            </li>
-                                                            
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img alt="CJCHT Logo" src="user/themes/jeanlee/images/logo.png" height="40" class="me-2">
+                <span>CJCHT</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="footwear.html">Footwear</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="cultureDropdown" role="button" data-bs-toggle="dropdown">
+                            Culture
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="culture/kehua.html">Kehua</a></li>
+                            <li><a class="dropdown-item" href="culture/vocalasia.html">Vocal Asia</a></li>
+                            <li><a class="dropdown-item" href="culture/ahouse.html">A House</a></li>
+                            <li><a class="dropdown-item" href="culture/boven.html">Boven</a></li>
                         </ul>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="sustainability.html">Sustainability</a>
-                                                <ul>
-                                                                                                        <li class="">
-                        <a href="sustainability/net-zero-commitment.html">- Net-zero Commitment</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="sustainability/cdp-supplier-engagement.html">- CDP Supplier Engagement</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="sustainability/Environmental__Biodiversity_Public_Policy_Announcement.html">- Environmental and Biodiversity Public Policy Announcement</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="sustainability/Commitment_Statement_Regarding_Environmental_Position.html">- Commitment and Statement Regarding Environmental Position</a>
-                                            </li>
-                                                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sustainabilityDropdown" role="button" data-bs-toggle="dropdown">
+                            Sustainability
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="sustainability/net-zero-commitment.html">Net-zero Commitment</a></li>
+                            <li><a class="dropdown-item" href="sustainability/cdp-supplier-engagement.html">CDP Supplier Engagement</a></li>
                         </ul>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="people.html">People</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="contact.html">Contact</a>
-                                                <ul>
-                                                                                                        <li class="">
-                        <a href="contact/taiwan.html">- Taiwan</a>
-                                                <ul>
-                                                                                                                                                
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="people.html">People</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown">
+                            Contact
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contact/taiwan.html">Taiwan</a></li>
+                            <li><a class="dropdown-item" href="contact/china.html">China</a></li>
+                            <li><a class="dropdown-item" href="contact/others.html">Others</a></li>
                         </ul>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="contact/china.html">- China</a>
-                                                <ul>
-                                                                                                                                                
-                        </ul>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="contact/others.html">- Others</a>
-                                                <ul>
-                                                                                                                                                
-                        </ul>
-                                            </li>
-                                                            
-                        </ul>
-                                            </li>
-                                                            
+                    </li>
                 </ul>
-            </div><!-- end mavMenu -->
-
-            <div id="bannerLang">
-                        	    <form id="langSwitcher" action="#" method="post">
-                    <div class="styled-select">
-                        <select name="lang" onchange="window.location.href=this.value">
-                            <option value="/" selected="selected">English</option>
-                        </select>
-                    </div>
-                </form>
             </div>
         </div>
+    </nav>
 
-        <div id="bannerWhiteLine"></div>
-
-        <div id="main">
-            <div id="contentTitle">
-                                    
-                            </div>
-            <div id="mainContent">
-                <div id="contentLeft">
-    <div id="innerContent">
-        <h1>CJCHT and Footwear</h1>
-        <div><p>CJCHT is one of the first Taiwanese company expanded into China in 1980s, servicing mostly North America and West European customers.  Starting in 2000, CJCHT also entered the domestic China market.  As 3 times winner of "Supplier of the Year" for Wal Mart, CJCHT is specializing in seasonal footwear and casual footwear, with production hubs in Shanghai, Wenzhou, and Putian.</p></div>
-    </div>
-</div>
-<div  id="contentRight" class="im">
-    
-    
-    
-
-
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $("#ls-UlEdIPoOLJ").lightSlider({
-        item: 1,
-        slideMove: 1,
-        slideMargin: 0,
-        mode: 'fade',
-        cssEasing: 'ease',
-        easing: '',
-        speed: 2000,
-        auto: true,
-        loop: true,
-        pause: 5000,
-        controls: false,
-        keyPress: true,
-        adaptiveHeight: true,
-        vertical: false,
-        verticalHeight: 500,
-        pager: false,
-        gallery: false,
-        galleryMargin: 15,
-        thumbMargin: 5,
-        enableTouch: true,
-        enableDrag: true,
-
-    });
-  });
-</script>
-
-
-<div id="ls-UlEdIPoOLJ-wrapper" class="grav-lightslider">
-        <ul id="ls-UlEdIPoOLJ">
-                                                            <li data-thumb="/images/2/9/9/0/e/2990eccc530e5ca61286c677ca1566772a10e478-animal3.jpeg">
-                <img src="images/7/2/a/f/7/72af754b6371f9c4ed5093432ebed3b48a946df6-animal3.jpg" />
-            </li>
-                                                            <li data-thumb="/images/4/2/a/5/f/42a5f80aec3923abdae921f943c9f9e4abe65af7-animal4.jpeg">
-                <img src="images/2/f/a/d/7/2fad78f80d7e7733cf76fdbca0b600d7a607d6bc-animal4.jpg" />
-            </li>
-                                                            <li data-thumb="/images/b/1/6/6/e/b166ecad7a1a317e90fd215127fc61dd15de8a3f-blingflop1.jpeg">
-                <img src="images/4/4/a/0/f/44a0f75fb37708e3c90109ecb9dd7c405a9ba775-blingflop1.jpg" />
-            </li>
-                                                            <li data-thumb="/images/5/8/1/3/6/581368bd6d8878518d2c9c410e76696f74733c70-blingflop2.jpeg">
-                <img src="images/b/4/8/a/8/b48a85d7c6d489388e877faf7af4f311bc3dd453-blingflop2.jpg" />
-            </li>
-                                                            <li data-thumb="/images/2/4/f/f/c/24ffc56dad962e2440ffa7269f8da12183bf435c-c01.jpeg">
-                <img src="images/6/3/f/f/b/63ffbe5234fea097a8fa17f58ec06471d6c6e322-c01.jpg" />
-            </li>
-                                                            <li data-thumb="/images/e/b/7/1/7/eb717a8b958bded7ad41cccf9325e80495fd19e5-c02.jpeg">
-                <img src="images/e/a/4/f/e/ea4fea8993cac31f9edaef21dff39b2e28edf73b-c02.jpg" />
-            </li>
-                                                            <li data-thumb="/images/7/c/3/c/1/7c3c1637e1ed97b8f17dab76c0834ac4e945b634-c03.jpeg">
-                <img src="images/1/8/7/b/9/187b97a4667902aa701c041e86da0d65bb53671f-c03.jpg" />
-            </li>
-                                                            <li data-thumb="/images/c/4/6/2/5/c46259cd53a242b0d0bca6418eb9e4a38ca091dd-c04.jpeg">
-                <img src="images/a/e/a/8/b/aea8bbea4353ac34b9d342fa2ccd18d9b1f38c5e-c04.jpg" />
-            </li>
-                                                            <li data-thumb="/images/4/5/6/1/8/45618d3fefbe8f0beb8b4d539a9fc08768ec8377-c05.jpeg">
-                <img src="images/c/6/b/6/2/c6b62fa65038767b01ff0db4023ea67c36831b0a-c05.jpg" />
-            </li>
-                                                            <li data-thumb="/images/0/a/7/f/e/0a7feb11465ae20d20b93da7c4cae8549f85db5d-c06.jpeg">
-                <img src="images/3/9/b/8/2/39b82a5e58b16a0433641387ae6cce4d5883442f-c06.jpg" />
-            </li>
-                                                            <li data-thumb="/images/b/2/e/a/b/b2eabfcb39609534ab6a3839e1aa9ff14226bfcd-c07.jpeg">
-                <img src="images/7/2/2/d/7/722d7c84bd97feecbdb43a1e5bf3855ab3562f1e-c07.jpg" />
-            </li>
-                                                            <li data-thumb="/images/6/d/9/b/6/6d9b68d0a9a34f3e5426e446d55080984ab9f413-c08.jpeg">
-                <img src="images/0/0/8/7/7/00877e61bc9e70b5b20274c6096b513073e4582c-c08.jpg" />
-            </li>
-                                                            <li data-thumb="/images/e/4/1/6/7/e416700775a9206a262ae20074aba2e730cf9dc3-c09.jpeg">
-                <img src="images/5/2/8/1/9/52819c2984d036d0bc59ee8326a592b36da97989-c09.jpg" />
-            </li>
-                                                            <li data-thumb="/images/5/7/9/a/3/579a3bae04eebed4b96e0688e3296bec44608f9e-c10.jpeg">
-                <img src="images/0/5/a/1/0/05a10ff987b70308328e4246d3a86e9fcb909dba-c10.jpg" />
-            </li>
-                                                            <li data-thumb="/images/f/6/2/9/8/f629888b680fe94ddf96cdacb8911339c4265d1d-c11.jpeg">
-                <img src="images/d/e/e/6/d/dee6dc3a20af9645ce1ad8c56d2209f233f8677b-c11.jpg" />
-            </li>
-                                                            <li data-thumb="/images/2/3/7/3/d/2373d9507758f3b666f625464a0b787a9cf6e7d0-c12.jpeg">
-                <img src="images/c/4/c/1/a/c4c1a4fd7c6d76f2356ac65338e4b78a1561fa7c-c12.jpg" />
-            </li>
-                                                            <li data-thumb="/images/2/6/6/a/d/266ad7560b41190774965f97f17d66a915bcdd66-c13.jpeg">
-                <img src="images/8/0/b/e/5/80be5e03d1713111591b746b9009e88656ebd6c7-c13.jpg" />
-            </li>
-                                                            <li data-thumb="/images/d/b/4/6/e/db46ee42c0c5e31174a4679d5d61bfd7b4e32955-c14.jpeg">
-                <img src="images/8/7/f/7/1/87f71ea99f55f55a2aec7173ea1ed7b6ca702c96-c14.jpg" />
-            </li>
-                                                            <li data-thumb="/images/6/e/a/4/f/6ea4f3d3a5f3dd9ba4de2cfe1b60c2038b5ce4e3-c15.jpeg">
-                <img src="images/8/3/d/d/5/83dd58e0004076e4c594596efda21e4c6786ecda-c15.jpg" />
-            </li>
-                                                            <li data-thumb="/images/5/e/6/4/d/5e64dfa3d591a92335c1b928802a8a148ac16e99-c16.jpeg">
-                <img src="images/d/2/3/7/7/d2377298bb13498365ea6b30f466bf1fc1b74977-c16.jpg" />
-            </li>
-                                                            <li data-thumb="/images/2/1/e/1/6/21e162515c613cc8afdf5b35343f2732526d99e0-leather1.jpeg">
-                <img src="images/d/d/7/4/6/dd74607f4b1bb1d22e2506f3978d294ef37fa6a8-leather1.jpg" />
-            </li>
-                                                            <li data-thumb="/images/5/4/1/3/e/5413e287d846793e6b4fca985b730a452618908d-leather2.jpeg">
-                <img src="images/3/e/9/b/c/3e9bc9f4ac6959b9b8f3f4b7b4080754bc3d7744-leather2.jpg" />
-            </li>
-                                                            <li data-thumb="/images/a/f/9/6/0/af960cd1694f787f4a3082dbea9f422814039f70-sandal2.jpeg">
-                <img src="images/7/3/9/3/c/7393c9eebaa4bb31e8e90a51d8011b48cdc056ee-sandal2.jpg" />
-            </li>
-                                                            <li data-thumb="/images/d/b/5/3/7/db537af0e7d182b7a657a4de4748091934064127-slippers1.jpeg">
-                <img src="images/9/1/7/1/2/917122a18ec324405d02a23d4a96117fbe03dcf7-slippers1.jpg" />
-            </li>
-                                                            <li data-thumb="/images/f/8/8/c/b/f88cbfe6d1a6153abf44e74c13e40a9cf9f28a20-slippers3.jpeg">
-                <img src="images/7/6/f/e/b/76feb1c2a35c346cdb14090b9071f978df0df0b9-slippers3.jpg" />
-            </li>
-                                                            <li data-thumb="/images/3/9/2/7/a/3927a2783a4b9bc36931d8436d4b856b8a02244d-street1.jpeg">
-                <img src="images/b/9/5/2/8/b952880dc369b51e061b52cd1033401c9be40043-street1.jpg" />
-            </li>
-            </ul>
-    </div>
-
-
-
-</div>
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="page-title">Premium Footwear</h1>
+                    <p class="page-subtitle">Quality shoes crafted with sustainable materials and innovative manufacturing processes</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <i class="fas fa-shoe-prints fa-6x opacity-50"></i>
+                    </div>
+                </div>
             </div>
-        </div><!-- end main -->
+        </div>
+    </header>
 
-        <div id="footer">
-                            <div id="footerDiv"> © Copyright 2012 CJCHT. All Rights Reserved.   </div>
-<a href="quagmiresemiweekly.html"><!-- judicial --></a>
-        </div><!-- end footer -->
-    </div><!-- end wrapper -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+    <!-- Product Categories -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Our Product Lines</h2>
+                    <p class="lead text-muted">Discover our diverse range of high-quality footwear</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/0/3/0/7/5/0307557093bfc0106dcd3ba8012d12f867c4d54a-sho.jpg" alt="Athletic Shoes">
+                            <div class="product-badge">New</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Athletic</div>
+                            <h3 class="product-title">Performance Sports Shoes</h3>
+                            <p class="product-description">High-performance athletic footwear designed for comfort and durability.</p>
+                            <ul class="product-features">
+                                <li><i class="fas fa-check"></i> Breathable mesh upper</li>
+                                <li><i class="fas fa-check"></i> Advanced cushioning</li>
+                                <li><i class="fas fa-check"></i> Non-slip outsole</li>
+                                <li><i class="fas fa-check"></i> Eco-friendly materials</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/9/1/7/1/2/917122a18ec324405d02a23d4a96117fbe03dcf7-slippers1.jpg" alt="Casual Slippers">
+                            <div class="product-badge">Popular</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Casual</div>
+                            <h3 class="product-title">Comfort Slippers</h3>
+                            <p class="product-description">Luxurious comfort slippers for everyday relaxation and home wear.</p>
+                            <ul class="product-features">
+                                <li><i class="fas fa-check"></i> Memory foam padding</li>
+                                <li><i class="fas fa-check"></i> Anti-slip sole</li>
+                                <li><i class="fas fa-check"></i> Machine washable</li>
+                                <li><i class="fas fa-check"></i> Ergonomic design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/7/3/9/3/c/7393c9eebaa4bb31e8e90a51d8011b48cdc056ee-sandal2.jpg" alt="Summer Sandals">
+                            <div class="product-badge">Sustainable</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Summer</div>
+                            <h3 class="product-title">Eco-Friendly Sandals</h3>
+                            <p class="product-description">Stylish sandals made from sustainable and recycled materials.</p>
+                            <ul class="product-features">
+                                <li><i class="fas fa-check"></i> Recycled materials</li>
+                                <li><i class="fas fa-check"></i> Adjustable straps</li>
+                                <li><i class="fas fa-check"></i> Water-resistant</li>
+                                <li><i class="fas fa-check"></i> Carbon neutral</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/d/d/7/4/6/dd74607f4b1bb1d22e2506f3978d294ef37fa6a8-leather1.jpg" alt="Leather Shoes">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Formal</div>
+                            <h3 class="product-title">Premium Leather Shoes</h3>
+                            <p class="product-description">Handcrafted leather shoes for formal and business occasions.</p>
+                            <ul class="product-features">
+                                <li><i class="fas fa-check"></i> Genuine leather</li>
+                                <li><i class="fas fa-check"></i> Handcrafted quality</li>
+                                <li><i class="fas fa-check"></i> Classic design</li>
+                                <li><i class="fas fa-check"></i> Long-lasting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/4/4/a/0/f/44a0f75fb37708e3c90109ecb9dd7c405a9ba775-blingflop1.jpg" alt="Flip Flops">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Beach</div>
+                            <h3 class="product-title">Designer Flip Flops</h3>
+                            <p class="product-description">Stylish flip flops perfect for beach days and casual outings.</p>
+                            <ul class="product-features">
+                                <li><i class="fas fa-check"></i> Lightweight design</li>
+                                <li><i class="fas fa-check"></i> Quick-dry material</li>
+                                <li><i class="fas fa-check"></i> Fashionable styles</li>
+                                <li><i class="fas fa-check"></i> Comfortable fit</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/b/9/5/2/8/b952880dc369b51e061b52cd1033401c9be40043-street1.jpg" alt="Street Shoes">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Urban</div>
+                            <h3 class="product-title">Street Style Sneakers</h3>
+                            <p class="product-description">Trendy sneakers designed for urban lifestyle and street fashion.</p>
+                            <ul class="product-features">
+                                <li><i class="fas fa-check"></i> Modern design</li>
+                                <li><i class="fas fa-check"></i> Durable construction</li>
+                                <li><i class="fas fa-check"></i> Versatile styling</li>
+                                <li><i class="fas fa-check"></i> All-day comfort</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  ga('create', 'UA-46870414-1', 'auto');
-  ga('send', 'pageview');
+    <!-- Manufacturing Process -->
+    <section class="process-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Our Manufacturing Process</h2>
+                    <p class="lead text-muted">From design to delivery, every step meets the highest quality standards</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="process-step">
+                        <div class="process-number">1</div>
+                        <h4>Design</h4>
+                        <p>Innovative design concepts focusing on comfort and style</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="process-step">
+                        <div class="process-number">2</div>
+                        <h4>Materials</h4>
+                        <p>Selection of premium sustainable materials</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="process-step">
+                        <div class="process-number">3</div>
+                        <h4>Cutting</h4>
+                        <p>Precision cutting using advanced machinery</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="process-step">
+                        <div class="process-number">4</div>
+                        <h4>Assembly</h4>
+                        <p>Expert craftsmanship in shoe assembly</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="process-step">
+                        <div class="process-number">5</div>
+                        <h4>Quality</h4>
+                        <p>Rigorous quality control testing</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="process-step">
+                        <div class="process-number">6</div>
+                        <h4>Delivery</h4>
+                        <p>Careful packaging and worldwide shipping</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</script>
+    <!-- Quality Standards -->
+    <section class="quality-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Quality & Certifications</h2>
+                    <p class="lead text-muted">Committed to excellence in every aspect of production</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="quality-card">
+                        <div class="quality-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4>ISO Certified</h4>
+                        <p>ISO 9001 quality management system certification ensuring consistent quality.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="quality-card">
+                        <div class="quality-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>Eco-Friendly</h4>
+                        <p>Sustainable manufacturing processes with minimal environmental impact.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="quality-card">
+                        <div class="quality-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Durability</h4>
+                        <p>Rigorous testing ensures our products exceed industry durability standards.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="quality-card">
+                        <div class="quality-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Fair Trade</h4>
+                        <p>Ethical manufacturing practices ensuring fair wages and working conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>CJCHT</h5>
+                    <p>Leading sustainable footwear manufacturer committed to excellence, culture, and social responsibility since 1989.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Company</h5>
+                    <div class="footer-links">
+                        <div><a href="about.html">About Us</a></div>
+                        <div><a href="footwear.html">Products</a></div>
+                        <div><a href="people.html">Leadership</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Sustainability</h5>
+                    <div class="footer-links">
+                        <div><a href="sustainability/net-zero-commitment.html">Net-zero</a></div>
+                        <div><a href="sustainability/cdp-supplier-engagement.html">CDP</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Culture</h5>
+                    <div class="footer-links">
+                        <div><a href="culture/kehua.html">Kehua</a></div>
+                        <div><a href="culture/vocalasia.html">Vocal Asia</a></div>
+                        <div><a href="culture/ahouse.html">A House</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Contact</h5>
+                    <div class="footer-links">
+                        <div><a href="contact/taiwan.html">Taiwan</a></div>
+                        <div><a href="contact/china.html">China</a></div>
+                        <div><a href="contact/others.html">Others</a></div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 CJCHT. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        // Google Analytics
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-46870414-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
-
-<!-- Mirrored from www.cjcht.com/footwear by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 15:10:12 GMT -->
 </html>
