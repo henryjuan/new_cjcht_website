@@ -1,76 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from www.cjcht.com/about by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 15:09:45 GMT -->
 <head>
     <meta name="google-site-verification" content="e8ZXDHj2ae_oHWhEe6JnJW61jqJntFipSeFBidrZcvU" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-            <title>About CJCHT | CJCHT</title>
+    <meta name="description" content="Learn about CJCHT - A women-owned sustainable footwear company committed to excellence, culture, and social responsibility since 1989.">
+    <title>About CJCHT | CJCHT</title>
 
-                    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-                    <link href="user/themes/jeanlee/css/custom.css" type="text/css" rel="stylesheet" />
-<link href="user/plugins/lightslider/css/lightslider-core.css" type="text/css" rel="stylesheet" />
-<link href="user/plugins/lightslider/css/lightslider-custom.css" type="text/css" rel="stylesheet" />
-
-
-                    <script src="system/assets/jquery/jquery-2.1.4.min.js" type="text/javascript" ></script>
-<script src="user/themes/jeanlee/js/modernizr.custom.71422.js" type="text/javascript" ></script>
-<script src="user/plugins/lightslider/js/jquery.lightSlider.min.js" type="text/javascript" ></script>
-
-
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c5d8b;
+            --secondary-color: #f8a613;
+            --accent-color: #e67e22;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --text-color: #34495e;
+        }
         
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            padding-top: 80px;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color)) !important;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,800 1000,1000"/></svg>');
+            z-index: 1;
+        }
+        
+        .page-header .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .about-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .about-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -12px;
+            background-color: var(--secondary-color);
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .value-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .value-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        /* Certificate Section */
+        .certificate-section {
+            background: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .certificate-badge {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .certificate-badge:hover {
+            transform: translateY(-5px);
+        }
+        
+        .certificate-badge img {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer h5 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img alt="logo" src="user/themes/jeanlee/images/logo.png"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img alt="CJCHT Logo" src="user/themes/jeanlee/images/logo.png" height="40" class="me-2">
+                <span>CJCHT</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="footwear.html">Footwear</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="cultureDropdown" role="button" data-bs-toggle="dropdown">
                             Culture
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="culture/kehua.html">- Kehua</a></li>
-                            <li><a class="dropdown-item" href="culture/vocalasia.html">- Vocal Asia</a></li>
-                            <li><a class="dropdown-item" href="culture/ahouse.html">- A House</a></li>
-                            <li><a class="dropdown-item" href="culture/boven.html">- Boven</a></li>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="culture/kehua.html">Kehua</a></li>
+                            <li><a class="dropdown-item" href="culture/vocalasia.html">Vocal Asia</a></li>
+                            <li><a class="dropdown-item" href="culture/ahouse.html">A House</a></li>
+                            <li><a class="dropdown-item" href="culture/boven.html">Boven</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="sustainabilityDropdown" role="button" data-bs-toggle="dropdown">
                             Sustainability
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="sustainability/net-zero-commitment.html">- Net-zero Commitment</a></li>
-                            <li><a class="dropdown-item" href="sustainability/cdp-supplier-engagement.html">- CDP Supplier Engagement</a></li>
-                            <li><a class="dropdown-item" href="sustainability/Environmental__Biodiversity_Public_Policy_Announcement.html">- Environmental and Biodiversity Public Policy Announcement</a></li>
-                            <li><a class="dropdown-item" href="sustainability/Commitment_Statement_Regarding_Environmental_Position.html">- Commitment and Statement Regarding Environmental Position</a></li>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="sustainability/net-zero-commitment.html">Net-zero Commitment</a></li>
+                            <li><a class="dropdown-item" href="sustainability/cdp-supplier-engagement.html">CDP Supplier Engagement</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="people.html">People</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown">
                             Contact
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="contact/taiwan.html">- Taiwan</a></li>
-                            <li><a class="dropdown-item" href="contact/china.html">- China</a></li>
-                            <li><a class="dropdown-item" href="contact/others.html">- Others</a></li>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contact/taiwan.html">Taiwan</a></li>
+                            <li><a class="dropdown-item" href="contact/china.html">China</a></li>
+                            <li><a class="dropdown-item" href="contact/others.html">Others</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -78,54 +340,238 @@
         </div>
     </nav>
 
-    <div id="bannerLang">
-                	    <form id="langSwitcher" action="#" method="post">
-            <div class="styled-select">
-                <select name="lang" onchange="window.location.href=this.value">
-                    <option value="/" selected="selected">English</option>
-                </select>
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="page-title">About CJCHT</h1>
+                    <p class="page-subtitle">Certified Women's Business Enterprise leading sustainable footwear manufacturing since 1989</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="images/7/1/f/9/c/71f9c7cdb3fbbc949f6583d98dfb0b5d8e44b13b-cht.jpg" alt="CJCHT Certificate" class="img-fluid rounded shadow">
+                </div>
             </div>
-        </form>
-    </div>
+        </div>
+    </header>
 
-    <div id="bannerWhiteLine"></div>
-
-    <div id="main">
-        <div id="contentTitle">
-                                Certified Women's Business Enterprise
-                        </div>
+    <!-- About Content -->
+    <section class="content-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
-    <div id="innerContent">
-        <h1>About CJCHT</h1>
-        <div><p>Established in 1989, CJCHT is a footwear company who always strives for providing not only quality products, but also the best customer service. Throughout the years, CJCHT has diversified itself into a group company with multiple core competencies: footwear, sustainability, culture and music, and charity. &nbsp; CJCHT will always commit to being a socially responsible enterprise in our society. This mission has created a very humane company culture which makes CJCHT stands out in the industry.</p></div>
-    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="im">
-                        <img title="Certified Women's Business Enterprise" src="images/7/1/f/9/c/71f9c7cdb3fbbc949f6583d98dfb0b5d8e44b13b-cht.jpg" class="img-fluid" />
+                <div class="col-lg-8 mx-auto">
+                    <div class="about-card">
+                        <h2 class="mb-4">Our Story</h2>
+                        <p class="lead">Established in 1989, CJCHT is a footwear company who always strives for providing not only quality products, but also the best customer service.</p>
+                        <p>Throughout the years, CJCHT has diversified itself into a group company with multiple core competencies: <strong>footwear</strong>, <strong>sustainability</strong>, <strong>culture and music</strong>, and <strong>charity</strong>.</p>
+                        <p>CJCHT will always commit to being a socially responsible enterprise in our society. This mission has created a very humane company culture which makes CJCHT stands out in the industry.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Timeline -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Our Journey</h2>
+                    <p class="lead text-muted">Key milestones in CJCHT's growth and development</p>
                 </div>
             </div>
-        </div><!-- end main -->
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>1989</h4>
+                        <h5>Company Founded</h5>
+                        <p>CJCHT established as a footwear manufacturing company with a commitment to quality and customer service.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>2014</h4>
+                        <h5>Women's Business Enterprise</h5>
+                        <p>First certification as a Women's Business Enterprise by WEConnect International.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>2015</h4>
+                        <h5>CDP Recognition</h5>
+                        <p>Achieved recognition in CDP Supply Chain for climate disclosure and sustainability efforts.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>2021</h4>
+                        <h5>Net-Zero Commitment</h5>
+                        <p>Announced commitment to Science Based Targets initiative (SBTi) Business Ambition for 1.5°C.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>2023</h4>
+                        <h5>Supplier Engagement Leader</h5>
+                        <p>Earned place on CDP's Supplier Engagement Leaderboard for outstanding climate action.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>2025</h4>
+                        <h5>Walmart Recognition</h5>
+                        <p>Honored with Walmart Canada Sustainability Recognition for carbon reduction and innovation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <footer class="container py-4 mt-5">
-            <p class="text-center text-muted">© Copyright 2012 CJCHT. All Rights Reserved.</p>
-        </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+    <!-- Core Values -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Our Values</h2>
+                    <p class="lead text-muted">The principles that guide everything we do</p>
+                </div>
+            </div>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>Excellence</h4>
+                    <p>Committed to delivering the highest quality products and services to our customers worldwide.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>Sustainability</h4>
+                    <p>Environmental responsibility is at the heart of our operations and future planning.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Social Responsibility</h4>
+                    <p>Making a positive impact in our communities and supporting charitable initiatives.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h4>Cultural Enrichment</h4>
+                    <p>Promoting arts, music, and cultural activities through our various foundations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  ga('create', 'UA-46870414-1', 'auto');
-  ga('send', 'pageview');
+    <!-- Certifications -->
+    <section class="certificate-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Certifications & Recognition</h2>
+                    <p class="lead text-muted">Industry recognition for our commitment to excellence and sustainability</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="certificate-badge">
+                        <i class="fas fa-certificate fa-3x text-primary mb-3"></i>
+                        <h5>Women's Business Enterprise</h5>
+                        <p>WEConnect International Certified</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="certificate-badge">
+                        <i class="fas fa-globe fa-3x text-success mb-3"></i>
+                        <h5>CDP Recognition</h5>
+                        <p>Supplier Engagement Leaderboard</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="certificate-badge">
+                        <i class="fas fa-target fa-3x text-warning mb-3"></i>
+                        <h5>Science Based Targets</h5>
+                        <p>Net-Zero Commitment</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="certificate-badge">
+                        <i class="fas fa-star fa-3x text-info mb-3"></i>
+                        <h5>Walmart Canada</h5>
+                        <p>Sustainability Recognition 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>CJCHT</h5>
+                    <p>Leading sustainable footwear manufacturer committed to excellence, culture, and social responsibility since 1989.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Company</h5>
+                    <div class="footer-links">
+                        <div><a href="about.html">About Us</a></div>
+                        <div><a href="footwear.html">Products</a></div>
+                        <div><a href="people.html">Leadership</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Sustainability</h5>
+                    <div class="footer-links">
+                        <div><a href="sustainability/net-zero-commitment.html">Net-zero</a></div>
+                        <div><a href="sustainability/cdp-supplier-engagement.html">CDP</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Culture</h5>
+                    <div class="footer-links">
+                        <div><a href="culture/kehua.html">Kehua</a></div>
+                        <div><a href="culture/vocalasia.html">Vocal Asia</a></div>
+                        <div><a href="culture/ahouse.html">A House</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Contact</h5>
+                    <div class="footer-links">
+                        <div><a href="contact/taiwan.html">Taiwan</a></div>
+                        <div><a href="contact/china.html">China</a></div>
+                        <div><a href="contact/others.html">Others</a></div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 CJCHT. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        // Google Analytics
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-46870414-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
-
-<!-- Mirrored from www.cjcht.com/about by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 15:09:46 GMT -->
 </html>
