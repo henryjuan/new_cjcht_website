@@ -1,268 +1,732 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from www.cjcht.com/sustainability by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 15:10:31 GMT -->
 <head>
     <meta name="google-site-verification" content="e8ZXDHj2ae_oHWhEe6JnJW61jqJntFipSeFBidrZcvU" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
-            <title>Sustainability | CJCHT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CJCHT Sustainability - Our commitment to environmental responsibility, net-zero goals, and sustainable manufacturing practices.">
+    <title>Sustainability | CJCHT</title>
 
-                    <link href="user/themes/jeanlee/css/custom.css" type="text/css" rel="stylesheet" />
-<link href="user/plugins/lightslider/css/lightslider-core.css" type="text/css" rel="stylesheet" />
-<link href="user/plugins/lightslider/css/lightslider-custom.css" type="text/css" rel="stylesheet" />
-
-
-                    <script src="system/assets/jquery/jquery-2.1.4.min.js" type="text/javascript" ></script>
-<script src="user/themes/jeanlee/js/modernizr.custom.71422.js" type="text/javascript" ></script>
-<script src="user/plugins/lightslider/js/jquery.lightSlider.min.js" type="text/javascript" ></script>
-
-
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c5d8b;
+            --secondary-color: #f8a613;
+            --accent-color: #e67e22;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --text-color: #34495e;
+            --green-color: #27ae60;
+            --blue-color: #3498db;
+        }
         
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            padding-top: 80px;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color)) !important;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--green-color), #2d8f47);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,800 1000,1000"/></svg>');
+            z-index: 1;
+        }
+        
+        .page-header .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .commitment-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+            text-align: center;
+        }
+        
+        .commitment-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .commitment-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--green-color), var(--blue-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .goals-section {
+            background: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .goal-item {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .goal-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .goal-year {
+            background: var(--green-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .goal-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .goal-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .progress-bar-custom {
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--green-color), var(--blue-color));
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        
+        .certifications-section {
+            padding: 80px 0;
+        }
+        
+        .certification-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .certification-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .certification-badge {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--green-color), var(--blue-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        .impact-section {
+            background: linear-gradient(135deg, var(--green-color), #2d8f47);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .impact-stat {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .impact-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: block;
+        }
+        
+        .impact-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .initiatives-section {
+            padding: 80px 0;
+        }
+        
+        .initiative-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .initiative-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .initiative-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--green-color), var(--blue-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .initiative-content {
+            padding: 30px;
+        }
+        
+        .initiative-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer h5 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .impact-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div id="wrapper">
-        <div id="header">
-            <div id="logo">
-                <a href="index.html"><img alt="logo" src="user/themes/jeanlee/images/logo.png"></a>
-            </div>
-
-            <div id="navMenu">
-                                    <ul>
-                                                                                                                                            <li class="">
-                        <a href="about.html">About</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="footwear.html">Footwear</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="culture.html">Culture</a>
-                                                <ul>
-                                                                                                        <li class="">
-                        <a href="culture/kehua.html">- Kehua</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="culture/vocalasia.html">- Vocal Asia</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="culture/ahouse.html">- A House</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="culture/boven.html">- Boven</a>
-                                            </li>
-                                                            
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img alt="CJCHT Logo" src="user/themes/jeanlee/images/logo.png" height="40" class="me-2">
+                <span>CJCHT</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="footwear.html">Footwear</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="cultureDropdown" role="button" data-bs-toggle="dropdown">
+                            Culture
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="culture/kehua.html">Kehua</a></li>
+                            <li><a class="dropdown-item" href="culture/vocalasia.html">Vocal Asia</a></li>
+                            <li><a class="dropdown-item" href="culture/ahouse.html">A House</a></li>
+                            <li><a class="dropdown-item" href="culture/boven.html">Boven</a></li>
                         </ul>
-                                            </li>
-                                                                                                    <li class="current">
-                        <a href="sustainability.html">Sustainability</a>
-                                                <ul>
-                                                                                                        <li class="">
-                        <a href="sustainability/net-zero-commitment.html">- Net-zero Commitment</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="sustainability/cdp-supplier-engagement.html">- CDP Supplier Engagement</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="sustainability/Environmental__Biodiversity_Public_Policy_Announcement.html">- Environmental and Biodiversity Public Policy Announcement</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="sustainability/Commitment_Statement_Regarding_Environmental_Position.html">- Commitment and Statement Regarding Environmental Position</a>
-                                            </li>
-                                                            
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="sustainabilityDropdown" role="button" data-bs-toggle="dropdown">
+                            Sustainability
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="sustainability/net-zero-commitment.html">Net-zero Commitment</a></li>
+                            <li><a class="dropdown-item" href="sustainability/cdp-supplier-engagement.html">CDP Supplier Engagement</a></li>
                         </ul>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="people.html">People</a>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="contact.html">Contact</a>
-                                                <ul>
-                                                                                                        <li class="">
-                        <a href="contact/taiwan.html">- Taiwan</a>
-                                                <ul>
-                                                                                                                                                
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="people.html">People</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown">
+                            Contact
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contact/taiwan.html">Taiwan</a></li>
+                            <li><a class="dropdown-item" href="contact/china.html">China</a></li>
+                            <li><a class="dropdown-item" href="contact/others.html">Others</a></li>
                         </ul>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="contact/china.html">- China</a>
-                                                <ul>
-                                                                                                                                                
-                        </ul>
-                                            </li>
-                                                                                                    <li class="">
-                        <a href="contact/others.html">- Others</a>
-                                                <ul>
-                                                                                                                                                
-                        </ul>
-                                            </li>
-                                                            
-                        </ul>
-                                            </li>
-                                                            
+                    </li>
                 </ul>
-            </div><!-- end mavMenu -->
-
-            <div id="bannerLang">
-                        	    <form id="langSwitcher" action="#" method="post">
-                    <div class="styled-select">
-                        <select name="lang" onchange="window.location.href=this.value">
-                            <option value="/" selected="selected">English</option>
-                        </select>
-                    </div>
-                </form>
             </div>
         </div>
+    </nav>
 
-        <div id="bannerWhiteLine"></div>
-
-        <div id="main">
-            <div id="contentTitle">
-                                    
-                            </div>
-            <div id="mainContent">
-                <div id="contentLeft">
-    <div id="innerContent">
-        <h1>Sustainability</h1>
-        <div><p>Not too long after the world passed the millennium, the world “sustainable” entered everyone’s life. Being sustainable became the trend, all industry was seeking solutions of being more “green”. After some time, we realize a “green shoe” was a long way to go. Not giving up our mission of being sustainable, we shifted our focus to shoe boxes. Boxes are made of paper, paper are made of trees, save paper, save trees! With that simple equation, CJCHT started a small sustainable packaging project. Over the year, our little project has grown into a department: NANOZEO, dedicated to full range PDQ &amp; Pallets design and manufacturing throughout the supply chain in China.</p>
-<p>CJCHT has always dedicated her sustainability efforts to R&amp;D and supply chain management. Substantial R&amp;D efforts (see <a href="https://www.nanozeo.com/">https://www.nanozeo.com</a>) by CJCHT have brought ''less material used'' and ''replaced, reduced, and reused (3R)'' into a possible selection by all corporate associated companies. Featured Sustainable products like ZEO®-lite low carbon anti-humidity corrugated boxes, FreshMagic® freshness preservation solutions, and NFRC Plastic Hangers are all available upon requests. A Green Guideline for packaging is also co-issued by CJCHT and TUV Nord for packaging industry.</p>
-<p>We provide a full sustainable PDQ and Packaging Sourcing service from design to production. For further detail, please visit : <a href="http://zeopdq.com/">ZEO Official Website</a></p>
-<p><a rel="lightbox" data-width="800" data-height="600" href="images/f/9/9/0/c/f990c55de059cb85c8681a7eac7b7ea7e08b0b6f-pdq1.jpg"><img title="PDQ" src="images/0/9/d/2/e/09d2ec90bd822cde2825f7715330026df241803e-pdq1.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/7/d/4/e/f/7d4ef759bc306823b185969396d33857cca35b70-pdq2.jpg"><img title="PDQ" src="images/2/d/8/5/2/2d8520536ab97aa1b6add964a5d397c3894eacd9-pdq2.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/e/1/4/f/5/e14f5d28e03714c2fe85d1c3336991da675657b1-pdq3.jpg"><img title="PDQ" src="images/9/7/7/8/5/977850c7b809ff4478fa5e1117eda6ee086266cc-pdq3.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/3/4/6/f/5/346f59f98ed52f2cad4ecdca1c1ca8bd38092abb-pdq4.jpg"><img title="PDQ" src="images/e/c/f/e/3/ecfe3ddf3dfe94391351fa811fbd6f67ba0dbd07-pdq4.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/e/5/5/6/7/e5567a9af75139ae2554193e84097f4418a5b76f-pdq5.jpg"><img title="PDQ" src="images/f/c/1/6/a/fc16a8c25905078f83191b11bbe74afedc52d054-pdq5.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/d/4/7/7/5/d4775cd7fc166a83ae678746fe3b192f53f6097c-pdq6.jpg"><img title="PDQ" src="images/a/7/c/e/0/a7ce092f311079d61da6a4b2dbcd470e605cd66f-pdq6.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/6/3/b/a/8/63ba85eb1d3ea09282d0fb8a375e98280cd1ac39-pdq7.jpg"><img title="PDQ" src="images/e/c/0/f/4/ec0f42660ba19a6d4b769714f931a499bbd4d6e0-pdq7.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/e/e/d/6/1/eed61e75f0a08a82badc17bbe86a4f7cbe92ffee-pdq8.jpg"><img title="PDQ" src="images/6/a/8/4/f/6a84fc6a6888c115068f927eb7bd13e7d1c3fdbc-pdq8.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/1/c/8/0/2/1c80289302aeab40de83f72a688f67543bbfd9d4-pdq9.jpg"><img title="PDQ" src="images/7/f/d/e/6/7fde6a00d95d95f28688d3ccafe828c96646258b-pdq9.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/c/5/7/1/3/c5713e213907ebce3ae96a5cb6b30ac0e7bb50f0-pdq10.jpg"><img title="PDQ" src="images/8/3/8/1/1/8381126438094603a1d717095505205ff3a5c1a7-pdq10.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/9/e/1/d/b/9e1dbbba81270766e044f4136e36950eb66caded-pdq11.jpg"><img title="PDQ" src="images/3/c/0/2/a/3c02a5960afb2e60cd565bb9f41f6c3282989025-pdq11.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/8/c/7/7/2/8c772e5cd5e9166474b0c3e22f3c54540d16d121-pdq12.jpg"><img title="PDQ" src="images/f/f/a/a/7/ffaa7056dc735abf044b75fe524f27ca70914cdb-pdq12.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/3/f/a/1/3/3fa1319334607f53e6caea0451928436a7d1a9c0-pdq13.jpg"><img title="PDQ" src="images/6/e/b/1/d/6eb1dc70c79dc164962d9455c4af93f402fef790-pdq13.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/6/9/8/7/6/6987645b828e82467c8d3afc845556970edaa967-pdq14.jpg"><img title="PDQ" src="images/1/6/f/c/2/16fc21049cc58218c048ef747e149d35b91c64e7-pdq14.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/8/d/0/2/0/8d020cf82c68370af9ba3d29d14d1064b14fbfae-pdq15.jpg"><img title="PDQ" src="images/e/9/0/e/c/e90eccb4ab3ff8e0af0f13b01a140711b59f929d-pdq15.jpg" /></a>
-<a rel="lightbox" data-width="800" data-height="600" href="images/b/8/1/5/e/b815ef396628eceedca7d85b148c72605d3fb308-pdq16.jpg"><img title="PDQ" src="images/e/5/e/1/e/e5e1e254bcd17ad746f8d0ee795e50c9e35f40e0-pdq16.jpg" /></a></p></div>
-    </div>
-</div>
-<div  id="contentRight" class="im">
-    
-    
-    
-
-
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $("#ls-7oDygFAphN").lightSlider({
-        item: 1,
-        slideMove: 1,
-        slideMargin: 0,
-        mode: 'fade',
-        cssEasing: 'ease',
-        easing: '',
-        speed: 2000,
-        auto: true,
-        loop: true,
-        pause: 5000,
-        controls: false,
-        keyPress: true,
-        adaptiveHeight: true,
-        vertical: false,
-        verticalHeight: 500,
-        pager: false,
-        gallery: false,
-        galleryMargin: 15,
-        thumbMargin: 5,
-        enableTouch: true,
-        enableDrag: true,
-
-    });
-  });
-</script>
-
-
-<div id="ls-7oDygFAphN-wrapper" class="grav-lightslider">
-        <ul id="ls-7oDygFAphN">
-                                                            <li data-thumb="/images/e/9/5/7/c/e957c2039386e890d4ab352a845abd8674dfb9d3-co2reduced.jpeg">
-                <img src="images/0/8/0/d/0/080d0f713cde1e09569c1f1d48ae4bb644b67334-co2reduced.jpg" />
-            </li>
-                                                            <li data-thumb="/images/d/f/8/e/8/df8e8feb0a409f08cb967a6168cf7a5530bd7cc3-pdq1.jpeg">
-                <img src="images/b/b/8/8/2/bb882694f07cb132b2cd83a4c9c0bb4a685057fd-pdq1.jpg" />
-            </li>
-                                                            <li data-thumb="/images/2/6/3/9/b/2639b37b65b6733b03a17d8f7e1cdd988fd7cedb-pdq2.jpeg">
-                <img src="images/2/0/d/3/c/20d3c23ab7c533a87a89e8ae3651057786843a7f-pdq2.jpg" />
-            </li>
-                                                            <li data-thumb="/images/6/e/f/a/b/6efabd66c258ae5b8a058364f2651db180a770e6-pdq3.jpeg">
-                <img src="images/5/a/e/6/c/5ae6c779382715cb964dd7be0b9d96cb9f3c4d40-pdq3.jpg" />
-            </li>
-                                                            <li data-thumb="/images/0/7/4/d/2/074d2c46869631192b05849168121596ce580f2b-pdq4.jpeg">
-                <img src="images/8/b/6/f/2/8b6f2f58f7f04134812c19c161eaf6324984246d-pdq4.jpg" />
-            </li>
-                                                            <li data-thumb="/images/b/4/5/2/3/b4523124ffbdb02e20064d5c3a3cac3a1311cdd0-pdq5.jpeg">
-                <img src="images/5/f/9/2/7/5f927e279823e94ab6a7b35650a2ea3bf02cef94-pdq5.jpg" />
-            </li>
-                                                            <li data-thumb="/images/e/b/5/4/6/eb54620d229f8aaf060d07324b0e36c183d62427-pdq6.jpeg">
-                <img src="images/3/c/9/4/9/3c949fabd9fc84be0415527514e7f6f79fe10f8c-pdq6.jpg" />
-            </li>
-                                                            <li data-thumb="/images/6/1/f/7/f/61f7fdb3a5088255fd0ca12450c3fdf04a3df6ec-pdq7.jpeg">
-                <img src="images/b/c/1/4/3/bc143345d118708c793de728f0adf698f38c88ad-pdq7.jpg" />
-            </li>
-                                                            <li data-thumb="/images/b/c/4/2/2/bc4223eb2f2a162a82bcda4241ae08c5add5317c-pdq8.jpeg">
-                <img src="images/3/9/d/5/c/39d5c54b987d04f0a310c19459f2262231a8a234-pdq8.jpg" />
-            </li>
-                                                            <li data-thumb="/images/b/8/b/9/1/b8b91da71d7661ad2dc92c8e84bd9c73228fd0ac-pdq9.jpeg">
-                <img src="images/b/9/9/0/0/b990045bdfa85e06afb525d7efd08f1b30ea0320-pdq9.jpg" />
-            </li>
-                                                            <li data-thumb="/images/8/1/5/8/2/81582218858430ce991d805d933653b42c851afa-pdq10.jpeg">
-                <img src="images/b/e/d/a/0/beda064d2964c2c283b7b79881c7ee086c606953-pdq10.jpg" />
-            </li>
-                                                            <li data-thumb="/images/e/b/f/e/7/ebfe7bcd6e0ba21a064258f6169a09080d8f9bf0-pdq11.jpeg">
-                <img src="images/7/4/d/8/1/74d813c01c0d811d106a585522f8f94dd66e5551-pdq11.jpg" />
-            </li>
-                                                            <li data-thumb="/images/b/3/5/0/0/b35009345e72e2c78714d1964458ba5d8e50b7e3-pdq12.jpeg">
-                <img src="images/c/e/d/b/4/cedb458aaf51556be0045bafa9a9ca313ac25a5e-pdq12.jpg" />
-            </li>
-                                                            <li data-thumb="/images/e/c/d/f/5/ecdf5dc900507c177bbe61ee2954672b96712b83-pdq13.jpeg">
-                <img src="images/c/9/7/6/6/c97663abeb4d9b05a8bc0baf61342b03c7cb43a1-pdq13.jpg" />
-            </li>
-                                                            <li data-thumb="/images/b/a/c/f/6/bacf69061729b3eb5f95a70500758d77cd0b119a-pdq14.jpeg">
-                <img src="images/9/2/8/6/f/9286f2b4ae72aa2e9bd6b8a86087accaa24f4f15-pdq14.jpg" />
-            </li>
-                                                            <li data-thumb="/images/e/1/b/a/a/e1baabf7323157c76f2b51a2a926f119e6e414b6-pdq15.jpeg">
-                <img src="images/5/d/7/d/c/5d7dcdfce9029584a3a9ea34fb0eba2a99150c6e-pdq15.jpg" />
-            </li>
-                                                            <li data-thumb="/images/f/4/9/6/6/f49661038d114a7eed32b233dc11ddb7098d6122-pdq16.jpeg">
-                <img src="images/2/3/5/c/d/235cd87dd7103d3cf3167214dd8a01055cf1e6e1-pdq16.jpg" />
-            </li>
-                                                            <li data-thumb="/images/6/f/a/3/5/6fa35e5180044a0f51ad69ac6e6f59bfaa9adca1-treesaved.jpeg">
-                <img src="images/6/e/8/4/f/6e84f9abebe9371ea7f89de6f75b4576a8c7724f-treesaved.jpg" />
-            </li>
-            </ul>
-    </div>
-
-
-
-</div>
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="page-title">Sustainability</h1>
+                    <p class="page-subtitle">Our commitment to environmental responsibility and sustainable manufacturing for a better future</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <i class="fas fa-leaf fa-6x opacity-50"></i>
+                    </div>
+                </div>
             </div>
-        </div><!-- end main -->
+        </div>
+    </header>
 
-        <div id="footer">
-                            <div id="footerDiv"> © Copyright 2012 CJCHT. All Rights Reserved.   </div>
-<a href="quagmiresemiweekly.html"><!-- judicial --></a>
-        </div><!-- end footer -->
-    </div><!-- end wrapper -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+    <!-- Our Commitments -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Our Environmental Commitments</h2>
+                    <p class="lead text-muted">Leading the industry towards a sustainable future</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="commitment-card">
+                        <div class="commitment-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4>Net-Zero Goals</h4>
+                        <p>Committed to achieving Science Based Targets initiative (SBTi) Business Ambition for 1.5°C by 2030.</p>
+                        <a href="sustainability/net-zero-commitment.html" class="btn btn-success">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="commitment-card">
+                        <div class="commitment-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <h4>Circular Economy</h4>
+                        <p>Implementing circular manufacturing processes to minimize waste and maximize resource efficiency.</p>
+                        <a href="#initiatives" class="btn btn-success">View Initiatives</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="commitment-card">
+                        <div class="commitment-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h4>Water Conservation</h4>
+                        <p>Advanced water management systems reducing consumption by 40% compared to industry standards.</p>
+                        <a href="#impact" class="btn btn-success">See Impact</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="commitment-card">
+                        <div class="commitment-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Renewable Energy</h4>
+                        <p>Transitioning to 100% renewable energy sources across all manufacturing facilities by 2026.</p>
+                        <a href="#goals" class="btn btn-success">View Timeline</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="commitment-card">
+                        <div class="commitment-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4>Sustainable Materials</h4>
+                        <p>Sourcing eco-friendly materials and developing innovative sustainable alternatives.</p>
+                        <a href="footwear.html" class="btn btn-success">Our Products</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="commitment-card">
+                        <div class="commitment-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Supply Chain</h4>
+                        <p>Working with suppliers to ensure ethical and sustainable practices throughout our supply chain.</p>
+                        <a href="sustainability/cdp-supplier-engagement.html" class="btn btn-success">CDP Report</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  ga('create', 'UA-46870414-1', 'auto');
-  ga('send', 'pageview');
+    <!-- Sustainability Goals -->
+    <section class="goals-section" id="goals">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Our 2030 Goals</h2>
+                    <p class="lead text-muted">Measurable targets for environmental impact reduction</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="goal-item">
+                        <div class="goal-year">2025</div>
+                        <div class="goal-title">50% Carbon Reduction</div>
+                        <div class="goal-description">Reduce carbon emissions by 50% compared to 2020 baseline</div>
+                        <div class="progress-bar-custom">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                        <small class="text-muted">Progress: 65% Complete</small>
+                    </div>
+                    
+                    <div class="goal-item">
+                        <div class="goal-year">2026</div>
+                        <div class="goal-title">100% Renewable Energy</div>
+                        <div class="goal-description">Transition all manufacturing facilities to renewable energy sources</div>
+                        <div class="progress-bar-custom">
+                            <div class="progress-fill" style="width: 45%"></div>
+                        </div>
+                        <small class="text-muted">Progress: 45% Complete</small>
+                    </div>
+                    
+                    <div class="goal-item">
+                        <div class="goal-year">2027</div>
+                        <div class="goal-title">Zero Waste to Landfill</div>
+                        <div class="goal-description">Achieve zero waste to landfill across all operations</div>
+                        <div class="progress-bar-custom">
+                            <div class="progress-fill" style="width: 30%"></div>
+                        </div>
+                        <small class="text-muted">Progress: 30% Complete</small>
+                    </div>
+                    
+                    <div class="goal-item">
+                        <div class="goal-year">2030</div>
+                        <div class="goal-title">Net-Zero Emissions</div>
+                        <div class="goal-description">Achieve net-zero greenhouse gas emissions across entire value chain</div>
+                        <div class="progress-bar-custom">
+                            <div class="progress-fill" style="width: 25%"></div>
+                        </div>
+                        <small class="text-muted">Progress: 25% Complete</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</script>
+    <!-- Environmental Impact -->
+    <section class="impact-section" id="impact">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Environmental Impact</h2>
+                    <p class="lead">Measurable results from our sustainability initiatives</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="impact-stat">
+                        <span class="impact-number">40%</span>
+                        <div class="impact-label">Carbon Emission Reduction</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="impact-stat">
+                        <span class="impact-number">60%</span>
+                        <div class="impact-label">Water Usage Reduction</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="impact-stat">
+                        <span class="impact-number">85%</span>
+                        <div class="impact-label">Waste Diverted from Landfill</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="impact-stat">
+                        <span class="impact-number">50k</span>
+                        <div class="impact-label">Trees Saved Annually</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Certifications & Recognition</h2>
+                    <p class="lead text-muted">Third-party validation of our environmental commitments</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="certification-card">
+                        <div class="certification-badge">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h5>CDP Supplier Engagement</h5>
+                        <p>Recognized as a leader on CDP's 2023 Supplier Engagement Leaderboard</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="certification-card">
+                        <div class="certification-badge">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h5>Walmart Sustainability</h5>
+                        <p>2024 Walmart Canada Sustainability Recognition Award recipient</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="certification-card">
+                        <div class="certification-badge">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h5>Science Based Targets</h5>
+                        <p>Committed to SBTi Business Ambition for 1.5°C initiative</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="certification-card">
+                        <div class="certification-badge">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h5>ISO 14001</h5>
+                        <p>Environmental Management System certification</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Initiatives -->
+    <section class="initiatives-section bg-light" id="initiatives">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Current Initiatives</h2>
+                    <p class="lead text-muted">Active projects driving environmental improvements</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="initiative-card">
+                        <div class="initiative-image">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <div class="initiative-content">
+                            <div class="initiative-title">Solar Energy Program</div>
+                            <p>Installing solar panels across manufacturing facilities to reduce grid dependency by 70%.</p>
+                            <small class="text-success">■ In Progress - 45% Complete</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="initiative-card">
+                        <div class="initiative-image">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="initiative-content">
+                            <div class="initiative-title">Water Recycling System</div>
+                            <p>Advanced water treatment and recycling systems reducing fresh water consumption.</p>
+                            <small class="text-primary">■ Operational - 60% Reduction Achieved</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="initiative-card">
+                        <div class="initiative-image">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <div class="initiative-content">
+                            <div class="initiative-title">Packaging Innovation</div>
+                            <p>Developing biodegradable and recyclable packaging materials for all products.</p>
+                            <small class="text-warning">■ Development Phase - Testing Complete</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>CJCHT</h5>
+                    <p>Leading sustainable footwear manufacturer committed to excellence, culture, and social responsibility since 1989.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Company</h5>
+                    <div class="footer-links">
+                        <div><a href="about.html">About Us</a></div>
+                        <div><a href="footwear.html">Products</a></div>
+                        <div><a href="people.html">Leadership</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Sustainability</h5>
+                    <div class="footer-links">
+                        <div><a href="sustainability/net-zero-commitment.html">Net-zero</a></div>
+                        <div><a href="sustainability/cdp-supplier-engagement.html">CDP</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Culture</h5>
+                    <div class="footer-links">
+                        <div><a href="culture/kehua.html">Kehua</a></div>
+                        <div><a href="culture/vocalasia.html">Vocal Asia</a></div>
+                        <div><a href="culture/ahouse.html">A House</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Contact</h5>
+                    <div class="footer-links">
+                        <div><a href="contact/taiwan.html">Taiwan</a></div>
+                        <div><a href="contact/china.html">China</a></div>
+                        <div><a href="contact/others.html">Others</a></div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 CJCHT. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        // Animate progress bars on scroll
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const rect = bar.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 100);
+                }
+            });
+        }
+
+        // Trigger animation on scroll
+        window.addEventListener('scroll', animateProgressBars);
+        
+        // Trigger animation on load
+        document.addEventListener('DOMContentLoaded', animateProgressBars);
+
+        // Google Analytics
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-46870414-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
-
-<!-- Mirrored from www.cjcht.com/sustainability by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 15:11:21 GMT -->
 </html>
